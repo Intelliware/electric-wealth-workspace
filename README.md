@@ -1,9 +1,9 @@
 # Electric Wealth v2
 
-Four repos, cloned side by side into one folder:
+Clone all four repos into the same parent folder (any name you like):
 
 ```
-some-folder/
+<parent folder>/
   electric-wealth-workspace/   ← this repo
   electric-wealth-db/
   electric-wealth-api/
@@ -16,12 +16,19 @@ Prerequisite: **Node.js 24** (workshop standard: 24.19.0). No Docker, database s
 
 ## Run it
 
-From `some-folder`:
+Open two terminals, both in the parent folder.
+
+**Terminal 1**: build the database, then start the API:
 
 ```bash
-cd electric-wealth-db  && npm run db:reset                    # build the database
-cd ../electric-wealth-api && npm install && npm run dev        # API on :4100
-cd ../electric-wealth-web && npm install && npm run dev        # web on :5173 (second terminal)
+cd electric-wealth-db && npm run db:reset
+cd ../electric-wealth-api && npm install && npm run dev   # API on :4100
+```
+
+**Terminal 2**: start the web app:
+
+```bash
+cd electric-wealth-web && npm install && npm run dev      # web on :5173
 ```
 
 Sign in: `sarah.chen@example.com` / `Demo123!` / MFA `123456`.

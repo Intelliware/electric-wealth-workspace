@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "source_method": "git-clone",
+  "source_provider": "azure-devops",
+  "source_dir": null,
+  "source_url": "https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/AIDE",
+  "ref": "main",
+  "ref_type": "branch",
+  "ref_verified": true,
+  "commit_sha": "92130a4c9536adba699ad39664e5d3e1e2203331",
+  "installed_at": "2026-10-15T19:02:02Z",
+  "target_dir": "./AIDE",
+  "mandatory_paths": [
+    "AGENTS.md",
+    ".agents/",
+    "config/",
+    "templates/",
+    "references/"
+  ],
+  "optional_paths": [
+    "README.md"
+  ],
+  "workspace_root_files": {
+    "skill_shims_dir": "./.agents/skills",
+    "skill_shims_swept": 0,
+    "skill_shims_generated": 52,
+    "skill_shim_marker": "<!-- aide:generated-shim -->",
+    "agents_md": "./AGENTS.md",
+    "agents_md_block_begin": "<!-- aide:managed:begin",
+    "agents_md_block_end": "<!-- aide:managed:end -->",
+    "agents_md_write_mode": "create"
+  }
+}

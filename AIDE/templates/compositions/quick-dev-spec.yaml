@@ -1,0 +1,64 @@
+# Composition: Quick-Dev Spec
+#
+# Minimal spec for a small change/feature. The MOST lightweight composition
+# over the same trunk used by greenfield-requirements-package: only the
+# blocks that absolutely must be answered before code is written.
+#
+# Total block count: 7 (5 content blocks + 2 shared wrappers).
+
+name: quick-dev-spec
+description: Minimal spec — overview, FRs, acceptance criteria, solution constraints, glossary.
+applies-to-flow: quick-dev
+package-type: quick-dev-spec
+
+# The `{feature-id}/` segment applies only when `features.toml` exists; drop it
+# otherwise. See references/ai-principles/feature-precondition.md.
+default-output-path: "{paths.requirements_package}/{feature-id}/{feature-id}-quick-dev-spec.md"
+
+blocks:
+  - slug: shared/overview
+    optional: false
+    order: 1
+  - slug: requirements/executive-summary-business-context
+    optional: false
+    order: 2
+  - slug: requirements/functional-requirements
+    optional: false
+    order: 3
+  - slug: requirements/acceptance-criteria
+    optional: false
+    order: 4
+  - slug: requirements/assumptions-constraints-out-of-scope
+    optional: false
+    order: 5
+    notes: |
+      Required even on the lightest spec because §12.2a Solution Constraints
+      must travel with the spec across implementation iterations and any
+      Solution Pivot triggered by a failed verification. If the user has no
+      solution constraints, render the section with a single "None known at
+      spec time" row rather than omitting it.
+  - slug: shared/glossary
+    optional: false
+    order: 6
+  - slug: shared/change-log
+    optional: false
+    order: 7
+
+elicitation:
+  - prompt: references/elicitation-patterns/change-scope-discovery.md
+    required: true
+
+decision-gates: []
+
+notes: |
+  Deliberately tight. Many requirements blocks declare applies-to: quick-dev-spec
+  (functional-specifications, business-logic-rules, user-journeys, data-requirements,
+  business-objectives-success-criteria, index, executive-summary-business-context).
+  We pick only the ones that block code authoring or that must be honored on
+  every retry — including assumptions-constraints-out-of-scope, which carries
+  the solution-constraints guardrails the implementer relies on during a
+  Solution Pivot. The rest stay out unless the dev escalates to a brownfield
+  enhancement spec or full requirements package.
+
+  If an item turns out to need richer elicitation, switch the composition —
+  do not bolt blocks onto quick-dev-spec.

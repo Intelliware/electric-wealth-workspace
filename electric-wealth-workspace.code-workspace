@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../electric-wealth-api-spring"
+		},
+		{
+			"path": "../electric-wealth-web"
+		},
+		{
+			"path": "../electric-wealth-db"
+		}
+	],
+	"settings": {}
+}

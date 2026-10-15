@@ -1,7 +1,6 @@
 {
   "folders": [
     { "name": "db", "path": "../electric-wealth-db" },
-    { "name": "api", "path": "../electric-wealth-api" },
     { "name": "api-spring", "path": "../electric-wealth-api-spring" },
     { "name": "web", "path": "../electric-wealth-web" },
     { "name": "workspace", "path": "." }

@@ -1,0 +1,5 @@
+# Feature registry — managed by skills/meta/select-feature.
+# Each [[features]] entry gives one delivery unit a stable ID — a lowercase
+# kebab slug — which becomes a directory segment in every artifact path.
+# See config/SCHEMAS.md § 2.8. Empty is legal and means
+# "feature-scoped, nothing minted yet".

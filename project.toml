@@ -1,0 +1,65 @@
+# Managed by skills/meta/start-project. Edit manually or via skills/meta/customize-framework.
+
+[project]
+name = "Electric Wealth"
+code = "electric-wealth"
+domain = "Retail wealth-management portal for individual investors: accounts, goals, documents, advisor messaging, market data and financial education"
+description = """
+Electric Wealth v2 is a multi-repo web application: a SQLite database
+(migrations + seed data), a Spring Boot REST API that publishes a committed
+OpenAPI contract, and a React + Vite browser app whose API types are generated
+from that contract. Users register, sign in with password + MFA, and manage
+their accounts, goals, documents, notifications, profile and settings, message
+an advisor, and browse market data and education content.
+"""
+default_flow = "brownfield"
+
+
+[project.paths]
+requirements_package    = "{project-root}/.framework-output/requirements"
+design_package          = "{project-root}/.framework-output/design"
+implementation_package  = "{project-root}/.framework-output/implementation"
+quality_package         = "{project-root}/.framework-output/quality"
+knowledge_base_path     = "{project-root}/../electric-wealth-knowledge-base"
+
+
+[project.change_log]
+enabled                   = true
+path                      = "{project-root}/CHANGELOG.md"
+versioning_strategy       = "semver"
+format                    = "keep-a-changelog"
+parts_affected_vocabulary = ["api", "ui", "auth", "data", "config", "build", "infra", "docs"]
+
+
+[project.elicitation]
+user_facing                = true
+has_ui                     = true
+has_authn                  = true
+has_external_integrations  = false
+identity_provider          = "custom"   # own bearer-token filter + MFA in the Spring API
+primary_database           = "other"    # SQLite via node:sqlite (db repo) and sqlite-jdbc (API)
+event_bus                  = "none"
+re_verification_gate       = "ask"
+
+
+[[project.repos]]
+code    = "api-spring"
+name    = "Electric Wealth API (Spring)"
+path    = "{project-root}/../electric-wealth-api-spring"
+role    = "api"
+type    = "java-21-spring-boot-4-maven"
+primary = true
+
+[[project.repos]]
+code = "web"
+name = "Electric Wealth Web App"
+path = "{project-root}/../electric-wealth-web"
+role = "ui"
+type = "react-19-vite-typescript"
+
+[[project.repos]]
+code = "db"
+name = "Electric Wealth Database"
+path = "{project-root}/../electric-wealth-db"
+role = "database"
+type = "sqlite-node-sql-migrations"

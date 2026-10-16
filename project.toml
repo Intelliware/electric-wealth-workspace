@@ -41,6 +41,22 @@ primary_database           = "other"    # SQLite via node:sqlite (db repo) and s
 event_bus                  = "none"
 re_verification_gate       = "ask"
 
+# Reverse-engineering decision gates (reverse-engineer-api, repo api-spring, 2026-10-15)
+has_openapi_contract            = true
+has_persistence                 = true
+has_caching                     = false
+has_background_jobs             = false
+has_inter_service_communication = false
+has_feature_flags               = false
+api_emits_webhooks              = false
+api_has_sdks                    = false
+api_publishes_sla               = false
+api_has_support_channels        = false
+
+# Reverse-engineering decision gates (reverse-engineer-web-app, repo web, 2026-10-16)
+has_forms = true   # login, MFA, 7-step registration, account opening, goals, address, booking, share
+has_i18n  = true   # i18next with en-CA / fr-CA resources
+
 
 [[project.repos]]
 code    = "api-spring"

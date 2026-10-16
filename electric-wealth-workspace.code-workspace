@@ -11,6 +11,9 @@
 		},
 		{
 			"path": "../electric-wealth-db"
+		},
+		{
+			"path": "../electric-wealth-knowledge-base"
 		}
 	],
 	"settings": {}

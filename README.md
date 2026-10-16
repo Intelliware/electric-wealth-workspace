@@ -6,25 +6,20 @@ Prerequisites: **Node.js 24** (workshop standard: 24.19.0) and **Java 21**. The 
 
 ## Get the repos
 
-In a parent folder (any name), clone all four repos side by side. Skip any you already have.
+In a parent folder (any name), clone all six repos side by side. Skip any you already have.
 
 ```bash
 git clone https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/electric-wealth-workspace
 git clone https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/electric-wealth-db
 git clone https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/electric-wealth-web
 git clone https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/electric-wealth-api-spring
-```
-
-Open `electric-wealth-workspace/electric-wealth.code-workspace` in VS Code to see all of them together.
-
-### Optional repos
-
-Not needed to run the app. Clone them next to the others if you want them:
-
-```bash
 git clone https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/electric-wealth-knowledge-base   # how the app works
 git clone https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/electric-wealth-specifications   # specifications
 ```
+
+The app runs from `db`, `api-spring` and `web`. `knowledge-base` and `specifications` are documentation.
+
+Open `electric-wealth-workspace/electric-wealth.code-workspace` in VS Code to see all of them together.
 
 ### Branches
 

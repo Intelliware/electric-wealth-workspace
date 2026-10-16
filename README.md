@@ -1,18 +1,34 @@
-# Electric Wealth v2
+# electric-wealth-workspace
 
-Clone these four repos into the same parent folder (any name you like):
+Setup instructions for Electric Wealth, for people and AI agents.
 
-```
-<parent folder>/
-  electric-wealth-workspace/   ← this repo
-  electric-wealth-db/
-  electric-wealth-web/
-  electric-wealth-api-spring/
+Prerequisites: **Node.js 24** (workshop standard: 24.19.0) and **Java 21**. The database is SQLite, built into Node, so there's nothing else to install.
+
+## Get the repos
+
+In a parent folder (any name), clone all four repos side by side. Skip any you already have.
+
+```bash
+git clone https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/electric-wealth-workspace
+git clone https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/electric-wealth-db
+git clone https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/electric-wealth-web
+git clone https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/electric-wealth-api-spring
 ```
 
 Open `electric-wealth-workspace/electric-wealth.code-workspace` in VS Code to see all of them together.
 
-Prerequisites: **Node.js 24** (workshop standard: 24.19.0) and **Java 21**. No Docker, database server or admin rights needed.
+### Optional repos
+
+Not needed to run the app. Clone them next to the others if you want them:
+
+```bash
+git clone https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/electric-wealth-knowledge-base   # how the app works
+git clone https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/electric-wealth-specifications   # specifications
+```
+
+### Branches
+
+`main` is the clean starting point in every repo. Work happens on a branch with the same name in every repo. For example, the internal docs and the knowledge base are on `kb1`. To switch, run `git checkout <branch>` in each repo that has that branch.
 
 ## Run it
 
@@ -34,5 +50,7 @@ cd electric-wealth-web && npm install && npm run dev      # web on :5173
 Sign in: `sarah.chen@example.com` / `Demo123!` / MFA `123456`.
 
 The web app is configured to use the Spring API on port 4200 by default. Stop the API before running `db:reset` again.
+
+> **AI agents:** if Node 24 or Java 21 is missing, stop and tell the user instead of installing them. Run both servers in the background and confirm they respond on ports 4200 and 5173.
 
 See each repo's README for its scripts.

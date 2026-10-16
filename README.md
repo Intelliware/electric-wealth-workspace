@@ -17,6 +17,19 @@ git clone https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/electric-w
 
 Open `electric-wealth-workspace/electric-wealth.code-workspace` in VS Code to see all of them together.
 
+### Optional repos
+
+Not needed to run the app. Clone them next to the others if you want them:
+
+```bash
+git clone https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/electric-wealth-knowledge-base   # how the app works
+git clone https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/electric-wealth-specifications   # specifications
+```
+
+### Branches
+
+`main` is the clean starting point in every repo. Work happens on a branch with the same name in every repo. For example, the internal docs and the knowledge base are on `kb1`. To switch, run `git checkout <branch>` in each repo that has that branch.
+
 ## Run it
 
 Open two terminals, both in the parent folder.

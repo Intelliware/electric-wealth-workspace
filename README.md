@@ -12,7 +12,7 @@ In a parent folder (any name), clone all six repos side by side. Skip any you al
 git clone https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/electric-wealth-workspace
 git clone https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/electric-wealth-db
 git clone https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/electric-wealth-web
-git clone https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/electric-wealth-api-spring
+git clone https://github.com/adam-mccormick-em/electric-wealth-api.git
 git clone https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/electric-wealth-knowledge-base   # how the app works
 git clone https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/electric-wealth-specifications   # specifications
 ```
@@ -33,7 +33,7 @@ Open two terminals, both in the parent folder.
 
 ```bash
 cd electric-wealth-db && npm run db:reset
-cd ../electric-wealth-api-spring && ./mvnw spring-boot:run   # API on :4200
+cd ../electric-wealth-api && ./mvnw spring-boot:run   # API on :4200
 ```
 
 **Terminal 2**: start the web app:

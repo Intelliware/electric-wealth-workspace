@@ -9,15 +9,15 @@ Prerequisites: **Node.js 24** (workshop standard: 24.19.0) and **Java 21**. The 
 In a parent folder (any name), clone all six repos side by side. Skip any you already have.
 
 ```bash
-git clone https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/electric-wealth-workspace
-git clone https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/electric-wealth-db
-git clone https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/electric-wealth-web
+git clone https://github.com/adam-mccormick-em/electric-wealth-workspace.git
+git clone https://github.com/adam-mccormick-em/electric-wealth-db.git
+git clone https://github.com/adam-mccormick-em/electric-wealth-web.git
 git clone https://github.com/adam-mccormick-em/electric-wealth-api.git
-git clone https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/electric-wealth-knowledge-base   # how the app works
-git clone https://dev.azure.com/IntelliwareDev/AI_Knowledge_Repo/_git/electric-wealth-specifications   # specifications
+git clone https://github.com/adam-mccormick-em/electric-wealth-knowledge-base.git   # how the app works
+git clone https://github.com/adam-mccormick-em/electric-wealth-specifications.git   # specifications
 ```
 
-The app runs from `db`, `api-spring` and `web`. `knowledge-base` and `specifications` are documentation.
+The app runs from `db`, `api` and `web`. `knowledge-base` and `specifications` are documentation.
 
 Open `electric-wealth-workspace/electric-wealth.code-workspace` in VS Code to see all of them together.
 

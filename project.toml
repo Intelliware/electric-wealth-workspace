@@ -16,9 +16,9 @@ default_flow = "brownfield"
 
 
 [project.paths]
-requirements_package    = "{project-root}/.framework-output/requirements"
-design_package          = "{project-root}/.framework-output/design"
-implementation_package  = "{project-root}/.framework-output/implementation"
+requirements_package    = "{project-root}/../electric-wealth-specifications/requirements"
+design_package          = "{project-root}/../electric-wealth-specifications/design"
+implementation_package  = "{project-root}/../electric-wealth-specifications/implementation"
 quality_package         = "{project-root}/.framework-output/quality"
 knowledge_base_path     = "{project-root}/../electric-wealth-knowledge-base"
 
@@ -61,7 +61,7 @@ has_i18n  = true   # i18next with en-CA / fr-CA resources
 [[project.repos]]
 code    = "api-spring"
 name    = "Electric Wealth API (Spring)"
-path    = "{project-root}/../electric-wealth-api-spring"
+path    = "{project-root}/../electric-wealth-api"
 role    = "api"
 type    = "java-21-spring-boot-4-maven"
 primary = true
